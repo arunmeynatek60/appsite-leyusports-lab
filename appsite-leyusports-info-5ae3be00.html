@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>乐鱼体育 – 产品说明 · 主题介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f3f5f8;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #1e1e2a;
+      line-height: 1.6;
+      padding: 2rem 1.2rem;
+    }
+
+    .page {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+
+    /* 头部 */
+    .hero {
+      background: white;
+      border-radius: 28px;
+      padding: 2.8rem 2.2rem;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.02);
+      border: 1px solid #e7eaee;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.8rem;
+      color: #1a2636;
+    }
+
+    .hero .tagline {
+      font-size: 1.05rem;
+      color: #4d5a6b;
+      max-width: 600px;
+      margin: 0 auto 0.2rem;
+      background: #eef1f4;
+      display: inline-block;
+      padding: 0.1rem 1rem;
+      border-radius: 30px;
+      font-weight: 450;
+    }
+
+    .hero p.lead {
+      margin-top: 1.2rem;
+      font-size: 1rem;
+      color: #2d3747;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* 卡片通用 */
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.6rem;
+      margin: 2rem 0;
+    }
+
+    .card {
+      background: white;
+      border-radius: 24px;
+      padding: 2rem 1.8rem;
+      flex: 1 1 280px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02), 0 4px 12px rgba(0, 0, 0, 0.02);
+      border: 1px solid #e3e7ed;
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: #1a2636;
+      border-left: 4px solid #7e8c9e;
+      padding-left: 0.9rem;
+    }
+
+    .card p, .card li {
+      font-size: 0.95rem;
+      color: #2d3747;
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .card li {
+      padding: 0.35rem 0;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .card li::before {
+      content: "·";
+      position: absolute;
+      left: 0.2rem;
+      color: #7e8c9e;
+      font-weight: 600;
+    }
+
+    /* 特色板块——表格样卡片 */
+    .feature-row {
+      background: white;
+      border-radius: 24px;
+      padding: 2rem 2rem 1.8rem;
+      border: 1px solid #e3e7ed;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+      margin-bottom: 2rem;
+    }
+
+    .feature-row h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      color: #1a2636;
+      letter-spacing: -0.01em;
+    }
+
+    .feature-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 2rem;
+    }
+
+    .feature-item {
+      flex: 1 1 200px;
+      background: #f8f9fb;
+      padding: 1rem 1.2rem;
+      border-radius: 16px;
+      border: 1px solid #eef0f3;
+    }
+
+    .feature-item strong {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+      color: #1e2c3c;
+    }
+
+    .feature-item span {
+      font-size: 0.9rem;
+      color: #3b485a;
+    }
+
+    /* 使用建议 + 场景合 */
+    .advice-block {
+      background: white;
+      border-radius: 24px;
+      padding: 2rem 2rem;
+      border: 1px solid #e3e7ed;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+      margin-bottom: 2rem;
+    }
+
+    .advice-block h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1a2636;
+    }
+
+    .advice-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+    }
+
+    .advice-card {
+      flex: 1 1 240px;
+      background: #f8f9fb;
+      border-radius: 18px;
+      padding: 1.4rem 1.4rem;
+      border: 1px solid #eaedf1;
+    }
+
+    .advice-card h4 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #253241;
+      margin-bottom: 0.5rem;
+    }
+
+    .advice-card p {
+      font-size: 0.9rem;
+      color: #2d3747;
+    }
+
+    /* 说明 / 提示块 */
+    .note-area {
+      background: white;
+      border-radius: 24px;
+      padding: 1.8rem 2rem;
+      border: 1px solid #e3e7ed;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 1.2rem 2rem;
+    }
+
+    .note-area .note-icon {
+      font-size: 1.2rem;
+      background: #eef1f6;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .note-area .note-content {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .note-area h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: #1e2c3c;
+    }
+
+    .note-area p {
+      font-size: 0.92rem;
+      color: #2d3747;
+    }
+
+    .faq-mini {
+      background: white;
+      border-radius: 24px;
+      padding: 1.8rem 2rem;
+      border: 1px solid #e3e7ed;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+      margin-bottom: 2rem;
+    }
+
+    .faq-mini h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1a2636;
+    }
+
+    .faq-item {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #eef1f5;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      color: #1e2c3c;
+    }
+
+    .faq-a {
+      color: #3b485a;
+      font-size: 0.92rem;
+      margin-top: 0.2rem;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #6a7789;
+      padding: 1rem 0 0.5rem;
+      border-top: 1px solid #dfe3e9;
+      margin-top: 1.5rem;
+    }
+
+    a {
+      color: #1e5c8b;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border 0.15s;
+    }
+
+    a:hover {
+      border-bottom: 1px solid #1e5c8b;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 1rem 0.8rem;
+      }
+      .hero {
+        padding: 1.8rem 1.2rem;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .card, .feature-row, .advice-block, .note-area, .faq-mini {
+        padding: 1.4rem 1.2rem;
+      }
+      .feature-item {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <!-- Hero 区：摘要 -->
+  <div class="hero">
+    <div class="tagline">产品说明 · 主题整合</div>
+    <h1>乐鱼体育 · 聚焦运动与体验</h1>
+    <p class="lead">
+      「乐鱼体育」围绕运动兴趣与信息交流延伸，尝试在体育内容领域中搭建一个结构清晰、浏览友好的聚合节点。页面整理自常见主题板块，侧重于内容归类、场景建议与使用参考。
+    </p>
+  </div>
+
+  <!-- 亮点卡片 -->
+  <div class="card-grid">
+    <div class="card">
+      <h3>内容摘要</h3>
+      <ul>
+        <li>涵盖赛事动态、运动科普与社区讨论的整合页面</li>
+        <li>分区基于常用体育话题，方便快速定位兴趣点</li>
+        <li>信息呈现保持简洁，减少多余跳转</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>设计特点</h3>
+      <ul>
+        <li>浅色背景 + 卡片分区，提升可读性</li>
+        <li>细边框与柔和阴影，视觉不干扰内容</li>
+        <li>响应式布局，兼顾桌面与移动设备</li>
+        <li>使用通用字体，保证兼容</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>适用场景</h3>
+      <ul>
+        <li>运动爱好者日常浏览信息集合</li>
+        <li>快速了解不同体育项目的基础内容</li>
+        <li>作为个人导航页或兴趣门户</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 特色板块：从关键词展开 -->
+  <div class="feature-row">
+    <h2>从主题展开 · 内容梳理</h2>
+    <div class="feature-items">
+      <div class="feature-item">
+        <strong>⚽ 足球</strong>
+        <span>联赛、战术、青训与历史回顾</span>
+      </div>
+      <div class="feature-item">
+        <strong>🏀 篮球</strong>
+        <span>赛事数据、球队阵容、经典对决</span>
+      </div>
+      <div class="feature-item">
+        <strong>🎾 网球</strong>
+        <span>大满贯、球员动态、场地科普</span>
+      </div>
+      <div class="feature-item">
+        <strong>🏸 羽毛球</strong>
+        <span>国际赛事、技术解析、业余指南</span>
+      </div>
+      <div class="feature-item">
+        <strong>🏓 乒乓球</strong>
+        <span>国家队、锦标赛、器材简介</span>
+      </div>
+    </div>
+    <p style="margin-top: 1.2rem; font-size: 0.92rem; color: #3b485a;">
+      以上主题在 <a href="https://appsite-leyusports.com.cn">乐鱼体育</a> 中均有对应的内容分区，用户可根据兴趣选择浏览。
+    </p>
+  </div>
+
+  <!-- 使用建议 + 场景 -->
+  <div class="advice-block">
+    <h2>使用建议 · 场景参考</h2>
+    <div class="advice-grid">
+      <div class="advice-card">
+        <h4>信息查找</h4>
+        <p>按体育项目分类查找相关文章、摘要或数据汇总，节省搜索时间。</p>
+      </div>
+      <div class="advice-card">
+        <h4>日常阅读</h4>
+        <p>利用简短条目和卡片布局快速浏览当日或当周运动话题。</p>
+      </div>
+      <div class="advice-card">
+        <h4>兴趣延伸</h4>
+        <p>从一项运动出发，通过关联内容发现其他体育项目的知识。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 可信但克制的访问说明 -->
+  <div class="note-area">
+    <div class="note-icon">ℹ</div>
+    <div class="note-content">
+      <h3>关于访问与使用</h3>
+      <p>
+        本页面为内容说明页，主要提供主题索引与介绍。如需直接浏览具体内容，可前往
+        <a href="https://appsite-leyusports.com.cn">乐鱼体育</a>。
+        该网站由独立维护者运营，内容基于公开信息整理，不提供任何形式的承诺或保证。请根据自身需要合理使用。
+      </p>
+    </div>
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <div class="faq-mini">
+    <h2>常见问题摘要</h2>
+    <div class="faq-item">
+      <div class="faq-q">页面内容多久更新一次？</div>
+      <div class="faq-a">内容根据主题动态调整，无固定周期，以实用和准确为优先。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">是否包含用户生成内容？</div>
+      <div class="faq-a">部分板块可能整合社区讨论摘要，均会注明参考来源。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">移动端浏览体验如何？</div>
+      <div class="faq-a">采用响应式设计，卡片自动适配屏幕宽度，适合手机与平板。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">我能否推荐新的内容主题？</div>
+      <div class="faq-a">可通过页面内渠道反馈，但无法保证采纳。</div>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    <p>内容整理基于公开资料 · 仅供个人参考 · 不构成任何形式的引导</p>
+  </div>
+</div>
+</body>
+</html>
